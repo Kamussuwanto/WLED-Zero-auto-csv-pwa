@@ -1,0 +1,22 @@
+{
+  "name": "WLED Inventory Tracker",
+  "short_name": "WLED Inv",
+  "description": "Mobile components drawer manager and LED locator tool",
+  "start_url": "http://192.168.43.129",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/static/inventory/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/inventory/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -2,19 +2,27 @@
 <html lang="en">
 <head>
     {% load static %}
-    <!-- PWA Manifest links -->
-    <link rel="manifest" href="{% static 'inventory/manifest.json' %}">
-    <meta name="theme-color" content="#2c3e50">
 
+
+    <!-- PWA Manifest Binding Link Element -->
+    <link rel="manifest" href="{% static 'inventory/manifest.json' %}">
+    <meta name="theme-color" content="#4CAF50">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <!-- Non-blocking Service Worker Registration Script Module -->
     <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-            navigator.serviceWorker.register("{% static 'inventory/serviceworker.js' %}")
-                .then(reg => console.log('Service Worker Registered!', reg))
-                .catch(err => console.log('Registration Failed:', err));
-            });
-        }
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register("{% static 'inventory/service-worker.js' %}")
+            .then((reg) => console.log('🚀 Service Worker active and listening across hotspot subnet!', reg))
+            .catch((err) => console.error('❌ Service Worker installation dropped:', err));
+        });
+    }
     </script>
+
+
+
 
     <meta charset="UTF-8">
     <title>Electronics Inventory Tracker</title>

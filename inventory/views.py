@@ -18,7 +18,7 @@ from django.db.models import Q
 # inventory/views.py
 
 # Option A: Use the static IP directly (Recommended if mDNS has latency over your phone hotspot)
-MCU_ADDRESS = "http://192.168.43.39"
+MCU_ADDRESS = "http://192.168.43.40"
 
 # Option B: Use the mDNS alias domain name 
 # MCU_ADDRESS = "http://electronics-leds.local"
